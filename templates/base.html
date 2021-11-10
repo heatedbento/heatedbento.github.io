@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css')}}"
+    />
+    <title>{% block title %}Twitchonline{% endblock %}</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <a href="/" class="nav-logo">TwitchOnline</a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="/live" class="nav-link">live <i class="fas fa-circle red"></i></a>
+          </li>
+          <li class="nav-item">
+            <a href="/usercheck" class="nav-link">usercheck <i class="fas fa-user green"></i></a>
+          </li>
+          <li class="nav-item">
+            <a href="/signup" class="nav-link">signup <i class="fas fa-user-plus yellow"></i></a>
+          </li>
+          <li class="nav-item">
+            <a href="/login" class="nav-link">login <i class="fas fa-sign-in-alt orange"></i></a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <div class="alert">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      This is an alert box.
+    </div>
+
+    <!-- <div class="sidenav">
+      <p>there are no streamers you like that are live right now</p>
+       <a href="#home">None</a>
+    </div> -->
+
+    <div class="container">
+      {% block content %}
+
+      <h1>TwitchOnline</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit vel, neque rem quo modi delectus natus magni esse amet dolorum itaque quasi a molestias, sed, laborum deserunt in sint voluptatibus pariatur consectetur quos at autem. Repellat consectetur cupiditate similique vitae rem maxime excepturi officia eaque tempora doloremque nisi vel consequatur dolores aut quasi voluptates labore, eum voluptas modi aperiam laborum soluta! Impedit quaerat blanditiis est error veritatis aperiam libero nihil ratione incidunt corrupti facilis ipsam, rem distinctio quos, quod consequatur vel dolore. Fugiat, voluptatum ducimus quaerat odio rem pariatur atque ratione magnam soluta beatae laudantium officiis quis cum, illum modi.</p>
+
+      <button class="btn-group">signup</button> <button class="btn-group">login</button> <button class="btn-group">live</button> <button class="btn-group">usercheck</button>
+      
+      {% endblock %}
+    </div>
+
+    <footer class="container">
+      <a href="/contact">contact <i class="fas fa-phone"></i></a>
+      <a href="https://github.com/heatedbento">github <i class="fab fa-github"></i></a>
+      <a href="discord.gg">discord <i class="fab fa-discord"></i></a>
+      <a href="/security">security <i class="fas fa-shield-alt"></i></a>
+      <a href="/privacy">privacy <i class="fas fa-lock"></i></a>
+      <a href="/credit">credits <i class="fas fa-file-alt"></i></a>
+    </footer>
+
+    </div>
+
+		<script src="https://kit.fontawesome.com/31c6f32ae9.js" crossorigin="anonymous"></script>
+  </body>
+</html>
