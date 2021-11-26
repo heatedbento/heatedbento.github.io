@@ -1,0 +1,94 @@
+#bottom {
+  position: relative;
+  text-align: center;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  color: var(--sub-color);
+  padding: 0 5px;
+}
+
+#bottom .keyTips {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  margin-bottom: 2rem;
+}
+
+#bottom #supportMeButton {
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+#bottom #supportMeButton:hover {
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+#bottom .leftright {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  gap: 1rem;
+}
+
+#bottom .leftright a {
+  text-decoration: none;
+}
+
+#bottom .leftright .left {
+  text-align: left;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  width: -webkit-fit-content;
+  width: fit-content;
+  gap: 1rem;
+  width: -moz-fit-content;
+}
+
+#bottom .leftright .right {
+  text-align: right;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  width: -webkit-fit-content;
+  width: fit-content;
+  width: -moz-fit-content;
+  -ms-grid-column-align: right;
+      justify-self: right;
+  gap: 1rem;
+}
+
+#bottom .leftright .left a,
+#bottom .leftright .right a {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 0.25rem;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  width: -moz-available;
+}
+
+#bottom .leftright .left a:hover,
+#bottom .leftright .right a:hover {
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+#bottom .version {
+  opacity: 0;
+}
+
+#bottom.focus .keyTips {
+  opacity: 0 !important;
+}
+
+#bottom.focus a {
+  opacity: 0 !important;
+}
+/*# sourceMappingURL=footer.css.map */
